@@ -10,6 +10,8 @@
 // @grant        GM_registerMenuCommand
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 // @run-at       document-start
+// @updateURL    https://raw.githubusercontent.com/YourUsername/RepoName/main/script.user.js
+// @downloadURL  https://raw.githubusercontent.com/YourUsername/RepoName/main/script.user.js
 // ==/UserScript==
 
 (function() {

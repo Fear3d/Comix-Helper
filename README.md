@@ -22,9 +22,7 @@
 
 2. **Install the Script:**
 
-   * [**Click Here to Install**](https://raw.githubusercontent.com/YourUsername/RepoName/main/script.user.js)
-
-     *(Note: Replace the link above with your actual raw GitHub file link once uploaded)*
+   * [**Click Here to Install**](https://raw.githubusercontent.com/Fear3d/Comix-Helper/main/Comix-Helper.user.js)
 
 3. **Visit Comix.to:** Open any chapter and the script will automatically activate.
 

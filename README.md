@@ -1,6 +1,6 @@
 # Comix Helper
 
-**Comix Helper** is a userscript designed to enhance the reading experience on [Comix.to](https://comix.to). It enables WASD and Arrow Key navigation, fixes broken keyboard scrolling, and provides a customizable settings interface for scroll behavior.
+**Comix Helper** is a userscript designed to enhance the reading experience on [Comix.to](https://comix.to). It enables WASD and Arrow Key navigation, fixes broken keyboard scrolling, and provides a customizable settings interface for scroll behavior. This is only meant for when you're using the "Long Strip" page display style in the Comix reader settings.
 
 ## 🚀 Features
 

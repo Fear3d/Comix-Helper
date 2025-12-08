@@ -22,21 +22,24 @@
 
 2. **Install the Script:**
 
-   * [**Click Here to Install**](https://raw.githubusercontent.com/Fear3d/Comix-Helper/main/Comix-Helper.user.js)
+   * [**Click Here to Install**](https://raw.githubusercontent.com/YourUsername/RepoName/main/script.user.js)
+
+     *(Note: Replace the link above with your actual raw GitHub file link once uploaded)*
 
 3. **Visit Comix.to:** Open any chapter and the script will automatically activate.
 
 ## 🎮 Controls
 
-| **Key** | **Action** | 
-| **W** / **Up Arrow** | Scroll Up | 
-| **S** / **Down Arrow** | Scroll Down | 
-| **A** / **Left Arrow** | Previous Chapter | 
-| **D** / **Right Arrow** | Next Chapter | 
-| **Page Up** | Scroll Up (Large Step) | 
-| **Page Down** | Scroll Down (Large Step) | 
-| **?** (Shift + /) | Show Help Menu | 
-| **Ctrl + Shift + F** | Toggle Hotkeys On/Off | 
+| Key | Action |
+| :--- | :--- |
+| **W** / **Up Arrow** | Scroll Up |
+| **S** / **Down Arrow** | Scroll Down |
+| **A** / **Left Arrow** | Previous Chapter |
+| **D** / **Right Arrow** | Next Chapter |
+| **Page Up** | Scroll Up (Large Step) |
+| **Page Down** | Scroll Down (Large Step) |
+| **?** (Shift + /) | Show Help Menu |
+| **Ctrl + Shift + F** | Toggle Hotkeys On/Off |
 
 ## ⚙️ Configuration
 

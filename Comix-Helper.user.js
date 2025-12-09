@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Comix Helper
 // @namespace    Fear3d
-// @version      1.0
+// @version      1.1
 // @description  Enables WASD and arrowkey navigation for Comix, and fixes broken keyboard scrolling
 // @author       Fear3d
 // @match        https://comix.to/*
@@ -25,7 +25,9 @@
     let useHotkeys = true;
 
     // --- Initialization ---
-    GM_registerMenuCommand("Configure Settings", showSettingsModal);
+    if (typeof GM_registerMenuCommand === "function") {
+        GM_registerMenuCommand("Configure Settings", showSettingsModal);
+    }
 
     /**
      * Toggles hotkey functionality and displays status toast.
@@ -168,7 +170,7 @@
     }
 
     /**
-     * Renders the help overlay.
+     * Renders the help overlay with a link to Settings.
      */
     function toggleHelpModal() {
         if ($('#comix-helper-help').length) {
@@ -178,10 +180,10 @@
 
         const helpHtml = `
             <div id="comix-helper-help" style="
-                 position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-                 background: rgba(0, 0, 0, 0.9); color: #fff; padding: 25px; border-radius: 8px;
-                 z-index: 100000; box-shadow: 0 0 20px rgba(0,0,0,0.7); font-family: sans-serif;
-                 min-width: 300px; border: 1px solid #444;">
+                position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.9); color: #fff; padding: 25px; border-radius: 8px;
+                z-index: 100000; box-shadow: 0 0 20px rgba(0,0,0,0.7); font-family: sans-serif;
+                min-width: 300px; border: 1px solid #444;">
                 <h3 style="margin-top: 0; border-bottom: 1px solid #555; padding-bottom: 10px; color: #ddd;">
                     Comix Helper Controls
                 </h3>
@@ -194,17 +196,45 @@
                     <li style="margin-top: 10px;"><strong style="color: #ffc107;">Ctrl+Shift+F</strong> : Toggle Hotkeys</li>
                     <li><strong style="color: #ffc107;">? (Shift + /)</strong> : Toggle this menu</li>
                 </ul>
-                <div style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #888;">
-                    (Click anywhere to close)
+                
+                <div style="margin-top: 20px; text-align: center;">
+                    <button id="ch-open-settings-btn" style="
+                        padding: 8px 16px; 
+                        background: #444; 
+                        color: white; 
+                        border: 1px solid #666; 
+                        border-radius: 4px; 
+                        cursor: pointer;
+                        font-size: 13px;">
+                        Open Settings
+                    </button>
+                </div>
+
+                <div style="text-align: center; margin-top: 10px; font-size: 0.8em; color: #888;">
+                    (Click outside to close)
                 </div>
             </div>
         `;
 
         $('body').append(helpHtml);
 
+        // Prevent clicks INSIDE the box from bubbling up to the document
+        $('#comix-helper-help').on('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Handler: Open Settings from Help
+        $('#ch-open-settings-btn').on('click', function(e) {
+            $('#comix-helper-help').remove();
+            showSettingsModal();
+        });
+
+        // Close on outside click
         setTimeout(() => {
             $(document).one('click', function() {
-                $('#comix-helper-help').remove();
+                if ($('#comix-helper-help').length) {
+                    $('#comix-helper-help').remove();
+                }
             });
         }, 10);
     }

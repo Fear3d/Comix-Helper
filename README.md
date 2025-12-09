@@ -47,6 +47,8 @@ You can customize the scrolling speed and animation behavior.
 
 2. Select **"Configure Settings"**.
 
+   * *Note: If you cannot find this option, you can also press `Shift + /` to open the Help Menu, and then click on `Open Settings`*
+
 3. A modal will appear allowing you to adjust:
 
    * **Step Scroll Speed:** How far the screen moves with W/S and arrow keys.

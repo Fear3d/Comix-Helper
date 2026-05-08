@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Comix Helper
 // @namespace    Fear3d
-// @version      1.1
+// @version      1.2.0
 // @description  Enables WASD and arrowkey navigation for Comix, and fixes broken keyboard scrolling
 // @author       Fear3d
 // @match        https://comix.to/*
@@ -269,30 +269,30 @@
 
             // Navigation Handling
             let hotkeyUsed = false;
-            const viewer = document.querySelector('div.viewer-wrapper');
+            const viewer = document.querySelector('main.rpage-main.rpage-main--long-strip');
 
             switch (evt.keyCode) {
                 case 37: // Left Arrow
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button:has(i.fa-sharp.fa-solid.fa-chevron-left)')[0].click();
+                        $('button.rpage-chapnav__btn[title="Previous chapter"]')[0].click();
                         hotkeyUsed = true;
                     }
                     break;
                 case 39: // Right Arrow
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button:has(i.fa-sharp.fa-solid.fa-chevron-right)')[0].click();
+                        $('button.rpage-chapnav__btn.rpage-chapnav__btn--next')[0].click();
                         hotkeyUsed = true;
                     }
                     break;
                 case 65: // A
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button:has(i.fa-sharp.fa-solid.fa-chevron-left)')[0].click();
+                        $('button.rpage-chapnav__btn[title="Previous chapter"]')[0].click();
                         hotkeyUsed = true;
                     }
                     break;
                 case 68: // D
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button:has(i.fa-sharp.fa-solid.fa-chevron-right)')[0].click();
+                        $('button.rpage-chapnav__btn.rpage-chapnav__btn--next')[0].click();
                         hotkeyUsed = true;
                     }
                     break;

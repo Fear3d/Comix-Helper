@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Comix Helper
 // @namespace    Fear3d
-// @version      1.2.0
+// @version      1.2.1
 // @description  Enables WASD and arrowkey navigation for Comix, and fixes broken keyboard scrolling
 // @author       Fear3d
 // @match        https://comix.to/*
@@ -274,25 +274,25 @@
             switch (evt.keyCode) {
                 case 37: // Left Arrow
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button.rpage-chapnav__btn[title="Previous chapter"]')[0].click();
+                        $('button.rpage-floatctl__btn[title="Previous chapter"]')[0].click();
                         hotkeyUsed = true;
                     }
                     break;
                 case 39: // Right Arrow
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button.rpage-chapnav__btn.rpage-chapnav__btn--next')[0].click();
+                        $('button.rpage-floatctl__btn[title="Next chapter"]')[0].click();
                         hotkeyUsed = true;
                     }
                     break;
                 case 65: // A
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button.rpage-chapnav__btn[title="Previous chapter"]')[0].click();
+                        $('button.rpage-floatctl__btn[title="Previous chapter"]')[0].click();
                         hotkeyUsed = true;
                     }
                     break;
                 case 68: // D
                     if (!evt.ctrlKey && !evt.shiftKey) {
-                        $('button.rpage-chapnav__btn.rpage-chapnav__btn--next')[0].click();
+                        $('button.rpage-floatctl__btn[title="Next chapter"]')[0].click();
                         hotkeyUsed = true;
                     }
                     break;
